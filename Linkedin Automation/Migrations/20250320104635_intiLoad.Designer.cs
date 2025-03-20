@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Linkedin_Automation.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250320082644_intiLoad")]
+    [Migration("20250320104635_intiLoad")]
     partial class intiLoad
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Linkedin_Automation.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Linkedin_Automation.DTOs.PostDetails", b =>
+            modelBuilder.Entity("Linkedin_Automation.Models.PostDetails", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

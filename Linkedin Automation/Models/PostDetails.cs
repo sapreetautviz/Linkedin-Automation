@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Linkedin_Automation.DTOs
+namespace Linkedin_Automation.Models
 {
     public class PostDetails
     {

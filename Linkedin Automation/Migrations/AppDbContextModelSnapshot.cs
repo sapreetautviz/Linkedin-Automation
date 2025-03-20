@@ -22,7 +22,7 @@ namespace Linkedin_Automation.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Linkedin_Automation.DTOs.PostDetails", b =>
+            modelBuilder.Entity("Linkedin_Automation.Models.PostDetails", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
