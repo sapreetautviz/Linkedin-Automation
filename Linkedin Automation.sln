@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linkedin Automation", "Linkedin Automation\Linkedin Automation.csproj", "{11690442-BB92-4974-AE0D-D0C86DE60FD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11690442-BB92-4974-AE0D-D0C86DE60FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11690442-BB92-4974-AE0D-D0C86DE60FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11690442-BB92-4974-AE0D-D0C86DE60FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11690442-BB92-4974-AE0D-D0C86DE60FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBE6B425-2BB2-4F7C-A3B2-BE3376E5926D}
+	EndGlobalSection
+EndGlobal
