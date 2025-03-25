@@ -95,5 +95,21 @@ namespace Linkedin_Automation.Controllers
             return Ok();
         }
 
+        [HttpGet("GetPostUrlOrComment")]
+        public async Task<IActionResult> GetAllPost()
+        {
+            var postDetails = await _context.PostRequests.ToListAsync();
+            if (postDetails.Count == 0)
+            {
+                return NotFound("No records PostUrl Or Comments");
+            }
+
+            var response = postDetails.Select(post => new PostResponseDto
+            {
+                PostUrl = post.PostUrl
+            }).ToList();
+
+            return Ok(response);
+        }
     }
 }

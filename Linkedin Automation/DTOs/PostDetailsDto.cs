@@ -20,4 +20,8 @@ namespace Linkedin_Automation.DTOs
         public string PostComment { get; set; }
     }
 
+    public class PostResponseDto
+    {
+        public string PostUrl { get; set; }
+    }
 }
