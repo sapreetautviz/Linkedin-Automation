@@ -73,5 +73,27 @@ namespace Linkedin_Automation.Controllers
             return Ok("All records deleted successfully.");
         }
 
+        [HttpPost("insertPostUrlOrComment")]
+        public async Task<IActionResult> Create(PostRequestDto post)
+        {
+            var postUrl = await _context.PostRequests.FirstOrDefaultAsync(x=>x.PostUrl == post.PostUrl);
+
+            if (postUrl != null)
+            {
+                return NotFound("Post with the same URL already exists.");
+            }
+
+            var newPost = new PostRequest
+            {
+                PostUrl = post.PostUrl,
+                PostComment = post.PostComment,
+                Status = "done"
+            };
+
+            _context.PostRequests.Add(newPost);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
     }
 }
