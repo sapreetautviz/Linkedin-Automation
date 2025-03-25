@@ -1,4 +1,4 @@
-﻿using Linkedin_Automation.DTOs;
+﻿using Linkedin_Automation.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Linkedin_Automation.Database
@@ -10,5 +10,6 @@ namespace Linkedin_Automation.Database
 
         }
         public DbSet<PostDetails> PostDetails { get; set; }
+        public DbSet<PostRequest> PostRequests { get; set; }
     }
 }
