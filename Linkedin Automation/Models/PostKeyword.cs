@@ -8,6 +8,6 @@ namespace Linkedin_Automation.Models
         public Guid Id { get; set; } = Guid.NewGuid();
         [Required]
         public string Keyword { get; set; }
-        public string Status { get; set; }
+        public int limit { get; set; }
     }
 }
