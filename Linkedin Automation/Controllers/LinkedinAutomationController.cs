@@ -111,5 +111,25 @@ namespace Linkedin_Automation.Controllers
 
             return Ok(response);
         }
+
+        [HttpPost("Insert-keyword")]
+        public async Task<IActionResult> Insert(KeywordDto keyword)
+        {
+            var postKeyword = await _context.PostKeywords.FirstOrDefaultAsync(x=>x.Keyword == keyword.Keyword);
+
+            if (postKeyword != null)
+            {
+                return NotFound("Keyword already exists.");
+            }
+
+            var newKeyword = new PostKeyword
+            { 
+                Keyword = keyword.Keyword,
+                limit = 10
+            };
+            await _context.AddAsync(newKeyword);
+            await _context.SaveChangesAsync();
+            return Ok(newKeyword);
+        }
     }
 }
