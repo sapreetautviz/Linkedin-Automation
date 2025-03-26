@@ -11,5 +11,6 @@ namespace Linkedin_Automation.Database
         }
         public DbSet<PostDetails> PostDetails { get; set; }
         public DbSet<PostRequest> PostRequests { get; set; }
+        public DbSet<PostKeyword> PostKeywords { get; set; }
     }
 }
