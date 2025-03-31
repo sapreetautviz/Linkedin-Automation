@@ -28,6 +28,7 @@ namespace Linkedin_Automation.DTOs
     public class KeywordDto
     {
         public string Keyword { get; set; }
+        public int Limit { get; set; } = 10;
     }
 
 }

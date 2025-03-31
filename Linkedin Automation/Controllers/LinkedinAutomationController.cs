@@ -125,11 +125,43 @@ namespace Linkedin_Automation.Controllers
             var newKeyword = new PostKeyword
             { 
                 Keyword = keyword.Keyword,
-                limit = 10
+                limit = keyword.Limit
             };
             await _context.AddAsync(newKeyword);
             await _context.SaveChangesAsync();
             return Ok(newKeyword);
+        }
+
+        [HttpGet("Get-Keyword")]
+        public async Task<IActionResult> GetKeyword()
+        {
+            var keyword = await _context.PostKeywords.ToListAsync();
+            if (keyword == null)
+            {
+                return NotFound("No records Keyword");
+            }
+            var response = keyword.Select(key => new KeywordDto
+            {
+                Keyword = key.Keyword,
+                Limit = key.limit
+            }).ToList();
+            return Ok(response);
+        }
+
+        [HttpDelete("Delete-keyword")]
+        public async Task<IActionResult> DeleteKeyword()
+        {
+            var allKeyword = await _context.PostKeywords.ToListAsync();
+
+            if (allKeyword.Count == 0)
+            {
+                return NotFound("No records found to delete.");
+            }
+
+            _context.PostKeywords.RemoveRange(allKeyword);
+            await _context.SaveChangesAsync();
+
+            return Ok("All records deleted successfully.");
         }
     }
 }
